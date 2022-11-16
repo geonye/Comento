@@ -49,6 +49,7 @@ CRUD 기능 구현하기
 > </insert>
 
 <br>
+
 ## DBMS 변경 시, 수정해야 할 것(Mysql <-> Oracle)
 > 1. root-context.xml 파일에서 DB연결 설정 바꿔주기
 > 2. board-Mapper.xml 파일에서 쿼리문 수정해주기

@@ -35,8 +35,8 @@ CRUD 기능 구현하기
  [수정 전]
 > ```java
 > <insert id="create">
->  insert into tbl_board (bno, title, content, writer) 
->  values(seq_board.nextval,#{title},#{content}, #{writer})
+>  insert into tbl_board (title, content, writer) 
+>  values(#{title},#{content}, #{writer})
 > </insert>
 
 <br>
@@ -48,7 +48,14 @@ CRUD 기능 구현하기
 >	 values((SELECT NVL(MAX(bno), 0) + 1 FROM tbl_board), #{title},#{content}, #{writer})
 > </insert>
 
-<br><br>
+<br>
+
+### DBMS 변경 시, 수정해야 할 것(Mysql <-> Oracle)
+> 1. root-context.xml 파일에서 DB연결 설정 바꿔주기
+> 2. board-Mapper.xml 파일에서 쿼리문 수정해주기
+> 3. test1/pom.xml 파일에서 <dependecy> 해당 DB로 바꿔주기
+
+<br>
 
 ---
 <img src="https://img.shields.io/badge/Spring-6DB33F?style=flat-square&logo=spring&logoColor=white"/> <img src="https://img.shields.io/badge/Eclipse-2C2255?style=flat-square&logo=Eclipse IDE&logoColor=white"/> <img src="https://img.shields.io/badge/Tomcat-F8DC75?style=flat-square&logo=Apache Tomcat&logoColor=white"/> <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=MySQL&logoColor=white"/>   

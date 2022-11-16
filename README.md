@@ -57,6 +57,14 @@ CRUD 기능 구현하기
 
 <br>
 
+## ++PLUS
+### 게시글 조회수 counting 구현
+<img width="890" alt="스크린샷 2022-11-16 오후 10 18 50" src="https://user-images.githubusercontent.com/54238424/202191456-64f95c82-69e5-4666-b24f-8c7a857034ba.png">
+
+> 1. board-Mapper.xml에 쿼리 작성. 
+> 2. DAO 인터페이스(BoardDAO.java)에 메소드 추가 및 DAO 구현체(BoardDAOImpl.java)에 Override 작성
+> 3. service구현체(BoardServiceImpl.java)파일 read 메소드 내부에 끼워넣기 
+
 ---
 <img src="https://img.shields.io/badge/Spring-6DB33F?style=flat-square&logo=spring&logoColor=white"/> <img src="https://img.shields.io/badge/Eclipse-2C2255?style=flat-square&logo=Eclipse IDE&logoColor=white"/> <img src="https://img.shields.io/badge/Tomcat-F8DC75?style=flat-square&logo=Apache Tomcat&logoColor=white"/> <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=MySQL&logoColor=white"/>   
 

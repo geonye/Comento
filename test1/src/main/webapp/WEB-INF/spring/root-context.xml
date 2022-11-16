@@ -13,7 +13,6 @@
 	 
 	<!-- Root Context: defines shared resources visible to all other web components -->
 	
-	<!--	
 	<bean id="dataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName"
@@ -23,9 +22,8 @@
 		<property name="username" value="root"></property>
 		<property name="password" value="1234"></property>
 	</bean>
-	-->
-	
-	<bean id="dataSource"
+
+	<!-- <bean id="dataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName"
 			value="oracle.jdbc.driver.OracleDriver"></property>
@@ -34,7 +32,7 @@
 		<property name="username" value="system"></property>
 		<property name="password" value="oracle"></property>
 	</bean>
-
+ -->
 	<bean id="sqlSessionFactory"
 		class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />

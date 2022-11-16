@@ -12,6 +12,8 @@ public interface BoardDAO {
 	
 	public void update(BoardVO vo) throws Exception;
 	
+	void updateViewCnt(Integer bno) throws Exception;
+	
 	public void delete(Integer bno) throws Exception;
 	
 	public List<BoardVO> listAll() throws Exception;

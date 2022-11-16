@@ -5,12 +5,19 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 <mapper namespace="com.crud.mapper.BoardMapper">
 
+
 <insert id="create">
+ insert into tbl_board (title, content, writer) 
+ values(#{title},#{content}, #{writer})
+</insert>
+
+
+<!-- <insert id="create">
 	 insert into tbl_board (bno, title, content, writer) 
 	 values(
 	 			(SELECT NVL(MAX(bno), 0) + 1 FROM tbl_board)
 	 			,#{title},#{content}, #{writer})
-</insert>
+</insert> -->
 
 
 <select id="read" resultType="com.crud.domain.BoardVO">
@@ -27,6 +34,11 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	 where bno = #{bno}
 </update>
 
+<update id="updateViewCnt">
+	update tbl_board 
+	set viewcnt = viewcnt + 1
+	where bno = #{bno}
+</update>
 
 <delete id="delete">
 	delete from tbl_board where bno = #{bno}

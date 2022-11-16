@@ -32,6 +32,11 @@ public class BoardDAOImpl implements BoardDAO {
 	public void update(BoardVO vo) throws Exception {
 		session.update(namespace+".update", vo);
 	}
+	
+	@Override
+	public void updateViewCnt(Integer bno) throws Exception {
+		session.update(namespace+".updateViewCnt", bno);
+	}
 
 	@Override
 	public void delete(Integer bno) throws Exception {

@@ -35,8 +35,8 @@ CRUD 기능 구현하기
  [수정 전]
 > ```java
 > <insert id="create">
->  insert into tbl_board (bno, title, content, writer) 
->  values(seq_board.nextval,#{title},#{content}, #{writer})
+>  insert into tbl_board (title, content, writer) 
+>  values(#{title},#{content}, #{writer})
 > </insert>
 
 <br>
